@@ -1,0 +1,44 @@
+let temperatureDictionary = [
+  "freezing": [
+    "Oxygen": -362,
+    "Ethyl alcohol": -173,
+    "Mercury": -38,
+    "Water": 32
+    ],
+  "boiling": [
+    "Oxygen": -306,
+    "Ethyl alcohol": 172,
+    "Mercury": 676,
+    "Water": 212 
+    ]
+  ]
+
+func getTemp() -> Double {
+  print("Enter temp: ")
+    if let temp = (Double)(readLine()!){
+      return temp
+    } else {
+      print("Please enter a valid temp! I'm going to keep asking until you do.")
+      return getTemp()
+  }
+}
+
+func main() {
+  let temp = getTemp()
+  for (reaction, dictionary) in temperatureDictionary {
+    for (substance, reactionTemp) in dictionary {
+      if reaction == "freezing" {
+        if Double(reactionTemp) >= temp {
+          print(" \(substance) will freeze")
+        }
+        // print(substance, freezingPoint)
+      } else {
+        if Double(reactionTemp) <= temp {
+          print(" \(substance) will boil")
+        }
+      }
+    }
+  }
+}
+
+main()

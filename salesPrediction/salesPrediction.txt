@@ -1,0 +1,7 @@
+//The East Coast sales division of a company generates 58 percent of total sales. Based on that percentage, write a program that will predict how much the East Coast division will generate if the company has $8.6 million in sales this year.
+
+let precentageOfSales = 0.58;
+let companySales = 8.6e6;
+let predictedSales = companySales * precentageOfSales;
+print("Company is predicted to generate $\(predictedSales)")
+

@@ -1,0 +1,42 @@
+//  Write a program that asks the user to enter a number within the range of 1 through 10. Use an if statement to display the Roman numeral version of that number. Input Validation: Do not accept a number less than 1 or greater than 10.
+
+
+
+func getNumInRange(min: Int, max: Int) {
+  let testRange = min..<max + 1
+  print("Enter a number in range of \(min) - \(max)")
+    if let num = (Int)(readLine()!), testRange.contains(num) {
+      print(roman(number: num))
+     } else {
+      print("Please enter a valid number! I'm going to keep asking until you do.");
+      getNumInRange(min: min, max: max)
+  }
+}
+
+
+func roman(number: Int) -> String
+{
+    let decimals = [10, 5, 1]
+    let numerals = ["X", "V", "I"]
+
+    var result = ""
+    var number = number
+
+    
+    while number > 0 {
+      for (index, decimal) in decimals.enumerated()
+      {
+          if number - decimal >= 0 {
+              number -= decimal
+              result += numerals[index]
+              break
+          }
+      }
+    }
+     
+    
+
+    return result
+}
+
+getNumInRange(min: 1, max: 10)

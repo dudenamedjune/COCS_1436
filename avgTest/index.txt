@@ -1,0 +1,11 @@
+// Write a program that prompts the user to enter five test scores and then prints the average test score. (Assume that the test scores are decimal numbers.)
+print("Please enter 5 test scores. Type each one at a time, press enter, and repeat until you have entered all of the socres")
+let test1 = (Double)(readLine()!)
+let test2 = (Double)(readLine()!)
+let test3 = (Double)(readLine()!)
+let test4 = (Double)(readLine()!)
+let test5 = (Double)(readLine()!)
+let totalTestGrades = test1! + test2! + test3! + test4! + test5!
+let average = totalTestGrades / 5
+print("Average:", average)
+

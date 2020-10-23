@@ -1,0 +1,51 @@
+//  Write a program that calculates and displays a person’s body mass index (BMI). BMI is often used to determine whether a person is overweight or underweight for his or her height. A person’s BMI is calculated with the following formula:
+
+// B M I = weight × 703 / height * height
+
+//  where weight is measured in pounds and height is measured in inches. The program should display a message indicating whether the person has optimal weight, is underweight, or is overweight. A person’s weight is considered to be optimal if his or her BMI is between 18.5 and 25. If the BMI is less than 18.5, the person is considered to be underweight. If the BMI value is greater than 25, the person is considered to be overweight.
+
+
+
+func getWeight() -> Int {
+    print("Enter weight in lbs: ")
+      if let bodyWeight = (Int)(readLine()!) {
+        return bodyWeight
+      } else {
+        print("Please enter a valid weight! I'm going to keep asking until you do.");
+        return getWeight()
+    }
+}
+
+func getHeight() -> Int {
+    print("Enter getHeight in inches: ")
+      if let height = (Int)(readLine()!) {
+        return height
+      } else {
+        print("Please enter a valid height! I'm going to keep asking until you do.");
+        return getHeight()
+    } 
+}
+
+func getBMI() {
+  let weight = getWeight()
+  let height = getHeight()
+  let bmi = Double((weight * 703)) / Double((height * height))
+  let roundedBMI = (bmi * 100).rounded() / 100
+  let isOptimalWeight = testOptimalWeight(bmi: roundedBMI)
+  let isUnderWeight = testunderWeight(bmi: roundedBMI)
+  print("BMI \(roundedBMI)")
+  if isOptimalWeight { return print("You are optimal weight")}
+  if isUnderWeight { return print("You are under weight")}
+  return print("You are overweight")
+
+}
+func testOptimalWeight(bmi: Double) -> Bool {
+  let optimalRange = 18.5..<25.01
+  return optimalRange.contains(bmi)
+}
+
+func testunderWeight(bmi: Double) -> Bool {
+  return bmi < 18.5
+}
+
+getBMI()

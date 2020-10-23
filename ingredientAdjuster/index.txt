@@ -1,0 +1,19 @@
+// A cookie recipe calls for the following ingredients:
+
+// 1.5 cups of sugar
+
+// 1 cup of butter
+
+// 2.75 cups of flour
+
+// The recipe produces 48 cookies with this amount of the ingredients. Write a program that asks the user how many cookies he or she wants to make, then displays the number of cups of each ingredient needed for the specified number of cookies.
+
+let cupsOfSugarPerCookie = 1.5 / 48.0
+let cupsOfButterPerCookie = 1.0 / 48.0
+let cupsOfFlourPerCookie = 2.75 / 48.0
+
+print("How Many cookies do you want to make?")
+let cookiesUserWants = (Double)(readLine()!)
+print("\(cupsOfSugarPerCookie * cookiesUserWants!) cups of sugar")
+print("\(cupsOfButterPerCookie * cookiesUserWants!) cups of butter")
+print("\(cupsOfFlourPerCookie * cookiesUserWants!) cups of flour")

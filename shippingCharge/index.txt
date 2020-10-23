@@ -1,0 +1,75 @@
+func range(min: Double, max: Double) -> (Double) -> Bool {
+  let range = min..<max + 1
+  func contains(num: Double) -> Bool {
+    return range.contains(num)
+  }
+  return contains
+}
+
+let validShipping = range(min: 10, max: 3000);
+
+func validWeight(weight: Double) -> Bool {
+  return weight > 0 && weight <= 20
+}
+
+func getWeight() -> Double {
+  print("Enter weight of the package in kg: ")
+    if let weight = (Double)(readLine()!), validWeight(weight: weight){
+      return weight
+    } else {
+      print("Please enter a valid weight! I'm going to keep asking until you do.")
+      return getWeight()
+  }
+}
+
+func getDistance() -> Double {
+  print("Enter shipping distance in miles: ")
+    if let distance = (Double)(readLine()!), validShipping(distance){
+      return distance
+    } else {
+      print("Please enter a distance greater than or equal to 10 but no more that 3000! I'm going to keep asking until you do.")
+      return getDistance()
+  }
+}
+
+func small(weight: Double) -> Bool {
+  return weight > 2 && weight <= 6
+}
+
+func medium(weight: Double) -> Bool {
+  return weight > 6 && weight <= 10
+}
+
+func large(weight: Double) -> Bool {
+  return weight > 10 && weight <= 20
+}
+
+func getPricePer500Miles(weight: Double) -> Double {
+  if large(weight: weight) {
+    return 4.80
+  } 
+  if medium(weight: weight) {
+    return 3.70
+  } 
+  if small(weight: weight) {
+    return 2.20
+  } 
+  return 1.10
+}
+func main() {
+  let weight = getWeight();
+  let distance = getDistance();
+  let pricePer500Miles = getPricePer500Miles(weight: weight);
+
+  let numCharges = distance / 500;
+  let wholeNumber = numCharges.truncatingRemainder(dividingBy: 1) == 0;
+  if numCharges < 500 {
+    return print("Charges: $\(pricePer500Miles)")
+  }
+  if wholeNumber {
+    return print("Charges: $\(numCharges * pricePer500Miles)")
+  }
+  print("Charges: $\(numCharges + 1 * pricePer500Miles)")
+}
+
+main()

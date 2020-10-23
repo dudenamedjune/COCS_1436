@@ -1,0 +1,39 @@
+// A can hold 3.78 liters of milk. Each morning, a dairy farm ships cartons of milk to a local grocery store. The cost of producing one liter of milk is $0.38, and the profit of each carton of milk is $0.27. Write a program that does the following:
+// a.    Prompts the user to enter the total amount of milk produced in the morning.
+// b.    Outputs the number of milk cartons needed to hold milk. (Round your answer to the nearest integer.)
+// c.    Outputs the cost of producing milk.
+
+// d.    Outputs the profit for producing milk.
+
+func milkProductionCost(liters: Double) -> Double{ 
+  let costPerLiter = 0.38
+  return costPerLiter * liters
+}
+
+func milkProfit(cartons: Double) -> Double {
+    let profitPerCarton = 0.27
+    return profitPerCarton * cartons
+}
+
+let LITERS_IN_A_CARTON = 4.0
+func milkCalculation() {
+        print("How many liters of milk is produced in the morning?")
+    if let litersOfMilk = (Double)(readLine()!) {
+      var numOfMilkCartons = litersOfMilk / LITERS_IN_A_CARTON
+      let overflow = litersOfMilk.truncatingRemainder(dividingBy: LITERS_IN_A_CARTON)
+      if overflow != 0 {
+       numOfMilkCartons = numOfMilkCartons + 1
+      }
+      let cost = milkProductionCost(liters: litersOfMilk)
+      let profit = milkProfit(cartons: numOfMilkCartons)
+      print("Number of Milk Cartons: ", Int(numOfMilkCartons))
+      print("Cost of production:", "$\(cost)")
+      print("Profit", "$\(profit)")
+  } else {
+      print("Please enter a valid number! I'm going to keep asking until you do.");
+      milkCalculation()
+  }
+} 
+milkCalculation()
+
+

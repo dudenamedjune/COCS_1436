@@ -1,0 +1,47 @@
+func getUnits() -> Int {
+    print("Enter units sold: ")
+      if let unitsSold = (Int)(readLine()!), unitsSold > 0{
+        return unitsSold
+      } else {
+        print("Please enter a valid number of units! I'm going to keep asking until you do.")
+        return getUnits()
+    }
+}
+
+func getAdjustment(units: Int) -> Double {
+  let test20 = range(min: 10, max: 19)
+  let test30 = range(min: 20, max: 49)
+  let test40 = range(min: 50, max: 99)
+  let is50 = units >= 100
+  if test20(units) {
+    return 0.8
+  }
+  if test30(units) {
+    return 0.7
+  }
+  if test40(units) {
+    return 0.6
+  }
+  if is50 {
+    return 0.5
+  }
+  return 1
+}
+
+func range(min: Int, max: Int) -> (Int) -> Bool {
+  let range = min..<max + 1
+  func contains(num: Int) -> Bool {
+    return range.contains(num)
+  }
+  return contains
+}
+
+func round(num: Double) -> Double {
+  return (num * 100).rounded() / 100
+}
+
+let units = getUnits()
+let adjustment = getAdjustment(units: units)
+let total = adjustment * (Double(units) * 99)
+let roundedTotal = round(num: total)
+print("Total: $\(roundedTotal)")

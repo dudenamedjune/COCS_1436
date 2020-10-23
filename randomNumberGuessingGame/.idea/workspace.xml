@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eaf81dac-1f75-4f7b-9cce-934a3eb742cc" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="macos_macos_x86_64" />
+  <component name="ProjectId" id="1jGCkkgUCBmWQfWFwJ7PUeY86WL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="randomNumberGuessingGame" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="randomNumberGuessingGame" TARGET_NAME="randomNumberGuessingGame" CONFIG_NAME="Debug" SCHEME_NAME="randomNumberGuessingGame" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="randomNumberGuessingGame" RUN_TARGET_NAME="randomNumberGuessingGame" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eaf81dac-1f75-4f7b-9cce-934a3eb742cc" name="Default Changelist" comment="" />
+      <created>1603421186961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603421186961</updated>
+      <workItem from="1603421188043" duration="1504000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1374" height="300" key="GridCell.Tab.0.bottom" timestamp="1603422683827">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1374" height="300" key="GridCell.Tab.0.bottom/0.0.2560.1080@0.0.2560.1080" timestamp="1603422683827" />
+    <state width="1374" height="300" key="GridCell.Tab.0.center" timestamp="1603422683826">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1374" height="300" key="GridCell.Tab.0.center/0.0.2560.1080@0.0.2560.1080" timestamp="1603422683826" />
+    <state width="1374" height="300" key="GridCell.Tab.0.left" timestamp="1603422683826">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1374" height="300" key="GridCell.Tab.0.left/0.0.2560.1080@0.0.2560.1080" timestamp="1603422683826" />
+    <state width="1374" height="300" key="GridCell.Tab.0.right" timestamp="1603422683827">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state width="1374" height="300" key="GridCell.Tab.0.right/0.0.2560.1080@0.0.2560.1080" timestamp="1603422683827" />
+  </component>
+</project>

@@ -1,0 +1,42 @@
+//
+//  index.swift
+//  playground
+//
+//  Created by June Lara on 10/20/20.
+//
+
+import Foundation
+
+func getSpeed() -> Int {
+    print("What is the speed of the vehicle in mph? ")
+    if let userSpeed = (Int)(readLine()!) {
+        return userSpeed
+    } else {
+        return getSpeed()
+    }
+}
+
+func getHours() -> Int {
+    print("How many hours has it traveled? ")
+    if let userHours = (Int)(readLine()!) {
+        return userHours
+    } else {
+        return getHours()
+    }
+}
+
+func printChart(hoursTraveled: Int, speed: Int) {a
+    for x in 1...hoursTraveled {
+        print("\(x)           \(x * speed) ")
+    }
+}
+func calcDistance () {
+    let speed = getSpeed();
+    let hours = getHours();
+    print("Hour Distance Traveled");
+    print("-----------------------------");
+    printChart(hoursTraveled: hours, speed: speed)
+}
+
+calcDistance()
+

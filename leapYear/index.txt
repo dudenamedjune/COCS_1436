@@ -1,0 +1,71 @@
+// Write a program that asks the user to enter the month (letting the user enter an integer in the range of 1 through 12) and the year. The program should then display the number of days in that month. Use the following criteria to identify leap years:
+
+// 1 - Determine whether the year is divisible by 100. If it is, then it is a leap year if and only if it is divisible by 400. For example, 2000 is a leap year but 2100 is not.
+
+// 2 - If the year is not divisible by 100, then it is a leap year if and only if it is divisible by 4. For example, 2008 is a leap year but 2009 is not.
+
+// Here is a sample run of the program:
+
+// Enter a month (1–12): 2
+
+//  Enter a year: 2008
+
+// Output:
+
+// Number of days: 29 days
+
+
+
+let DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+func getMonth() -> Int {
+    print("Enter month (1-12): ")
+      if let month = (Int)(readLine()!), testMonthRange(month: month) {
+        return month
+      } else {
+        print("Please enter a valid month! I'm going to keep asking until you do.")
+        return getMonth()
+    }
+}
+func getYear() -> Int {
+  print("Enter year:")
+  if let year = (Int)(readLine()!), year > 0 {
+        return year
+      } else {
+        print("Please enter a valid year! I'm going to keep asking until you do.")
+        return getYear()
+    }
+}
+
+func resolveLeapYear(month: Int, year: Int) -> Int {
+  let numDays = DAYS[month - 1]
+  if month == 2 {
+    if isLeapYear(year: year) {
+      return numDays + 1
+    }
+  }
+  return numDays
+}
+
+func getDays() {
+  let month = getMonth()
+  let year = getYear()
+  print("Number of days: \(resolveLeapYear(month: month, year: year))")
+}
+
+func testMonthRange(month: Int) -> Bool {
+  let optimalRange = 1..<13
+  return optimalRange.contains(month)
+}
+
+func isLeapYear(year: Int) -> Bool {
+  let divisibleBy100 = year % 100 == 0
+  let divisibleBy400 = year % 400 == 0
+  let divisibleBy4 = year % 4 == 0
+  if divisibleBy100 && divisibleBy400 || !divisibleBy100 && divisibleBy4 { 
+    return true 
+    }
+  return false
+}
+
+getDays()

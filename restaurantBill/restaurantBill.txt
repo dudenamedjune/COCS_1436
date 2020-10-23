@@ -1,0 +1,14 @@
+// Write a program that computes the tax and tip on a restaurant bill for a patron with an $88.67 meal charge. The tax should be 6.75 percent of the meal cost. The tip should be 20 percent of the total after adding the tax. Display the meal cost, tax amount, tip amount, and total bill on the screen.
+
+
+let MEAL_CHARGE = 88.67
+let TAX_RATE = 0.0675
+let TIP_PERCENTAGE = 0.20
+let TAX_AMOUNT = MEAL_CHARGE * TAX_RATE 
+let TOTAL_WITHOUT_TIP = TAX_AMOUNT + MEAL_CHARGE
+let TIP_AMOUNT = TOTAL_WITHOUT_TIP * TIP_PERCENTAGE
+let TOTAL = TIP_AMOUNT + TOTAL_WITHOUT_TIP
+print("Cost: $\(MEAL_CHARGE)")
+print("Tax Amount: $\(TAX_AMOUNT)")
+print("Tip Amount: $\(TIP_AMOUNT)")
+print("Total: $\(TOTAL)")

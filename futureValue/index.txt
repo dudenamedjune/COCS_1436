@@ -1,0 +1,49 @@
+//
+//  main.swift
+//  markup
+//
+//  Created by June Lara on 11/23/20.
+//
+//
+import Foundation
+
+
+func defaultComparison (userInput: Double) -> Bool{
+    userInput >= 0
+}
+
+func userInput (
+        inputMessage: String,
+        tryAgainMessage: String
+) -> (@escaping (Double) -> Bool) -> Double {
+    func inputValidation (comparisonCb: @escaping (Double) -> Bool) -> Double {
+        print(inputMessage)
+        if let num = (Double)(readLine()!), comparisonCb(num) == true {
+            return num
+        } else {
+            print(tryAgainMessage)
+            return inputValidation(comparisonCb: comparisonCb)
+        }
+    }
+    return inputValidation;
+}
+
+func futureValue (presentValue: Double, rate: Double, months: Double) -> Double {
+    return presentValue * pow((1 + rate), months)
+}
+
+let tryAgainString = "Please enter a positive number";
+let getPresentValue = userInput(inputMessage: "Enter the present value:", tryAgainMessage: tryAgainString)
+let getInterestRate = userInput(inputMessage: "Enter monthly interest rate:", tryAgainMessage: tryAgainString)
+let getNumberOfMonths = userInput(inputMessage: "Enter number of months:", tryAgainMessage: tryAgainString)
+
+func main() {
+    let presentValue = getPresentValue(defaultComparison)
+    //instructions weren't clear on how the user would enter this field
+    let interestRate = (getInterestRate(defaultComparison)) / 100
+    let numberOfMonths = getNumberOfMonths(defaultComparison)
+    let calcFutureValue = futureValue(presentValue: presentValue, rate: interestRate, months: numberOfMonths)
+    print(calcFutureValue)
+}
+
+main();

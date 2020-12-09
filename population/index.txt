@@ -1,0 +1,59 @@
+//
+//  main.swift
+//  markup
+//
+//  Created by June Lara on 11/23/20.
+//
+//
+import Foundation
+
+func userInput (
+        inputMessage: String,
+        tryAgainMessage: String
+) -> (@escaping (Double) -> Bool) -> Double {
+    func inputValidation (comparisonCb: @escaping (Double) -> Bool) -> Double {
+        print(inputMessage)
+        if let num = (Double)(readLine()!), comparisonCb(num) == true {
+            return num
+        } else {
+            print(tryAgainMessage)
+            return inputValidation(comparisonCb: comparisonCb)
+        }
+    }
+    return inputValidation;
+}
+
+let tryAgainString = "Please enter a number greater than";
+let getStartSize = userInput(inputMessage: "Enter the starting population:", tryAgainMessage: "\(tryAgainString) or equal to 2")
+let getBirthRate = userInput(inputMessage: "Enter annual birth rate:", tryAgainMessage: "\(tryAgainString) or equal to 0")
+let getDeathRate = userInput(inputMessage: "Enter annual death rate:", tryAgainMessage: "\(tryAgainString) or equal to 0")
+let getNumberOfYears = userInput(inputMessage: "Enter number of years:", tryAgainMessage: "\(tryAgainString) greater than or equal to 1")
+
+func greaterThanOrEqualTo (test: Double) -> (Double) -> Bool  {
+    func validator (userInput: Double) -> Bool {
+        userInput >= test
+    }
+    return validator
+}
+
+func calculatePopulationSize (size: Double, birthRate: Double, deathRate: Double) -> Double {
+   size + ((birthRate * size) - (deathRate * size))
+}
+func main() {
+    var size = getStartSize(greaterThanOrEqualTo(test: 2))
+    let birthRate = getBirthRate(greaterThanOrEqualTo(test: 0))
+    let deathRate = getDeathRate(greaterThanOrEqualTo(test: 0))
+    let numYears = getNumberOfYears(greaterThanOrEqualTo(test: 1))
+    for x in 1...Int(numYears) {
+        let population = calculatePopulationSize(size: size, birthRate: birthRate, deathRate: deathRate)
+        // Requirements did not mention handling floats or how the rate should be entered. Left it up to the user to enter the rate as 0.10 aka 10 percent 
+        print("Population size in \(x) years: \(population)")
+        size = population
+    }
+}
+
+main();
+
+
+
+

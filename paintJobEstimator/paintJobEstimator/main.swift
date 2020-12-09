@@ -1,0 +1,102 @@
+//
+//  main.swift
+//  markup
+//
+//  Created by June Lara on 11/23/20.
+//
+//
+import Foundation
+
+
+
+
+func userInput (
+        inputMessage: String,
+        tryAgainMessage: String
+) -> (@escaping (Double) -> Bool) -> Double {
+    func inputValidation (comparisonCb: @escaping (Double) -> Bool) -> Double {
+        print(inputMessage)
+        if let num = (Double)(readLine()!), comparisonCb(num) == true {
+            return num
+        } else {
+            print(tryAgainMessage)
+            return inputValidation(comparisonCb: comparisonCb)
+        }
+    }
+    return inputValidation;
+}
+
+let tryAgainString = "Please enter a number greater than";
+let getNumberOfRooms = userInput(inputMessage: "Enter the number of rooms:", tryAgainMessage: "\(tryAgainString) 1")
+let getPriceOfPaintPerGallon = userInput(inputMessage: "Enter price of paint per gallon:", tryAgainMessage: "\(tryAgainString) or equal to 10")
+let getSquareFeetOfWallSpace = userInput(inputMessage: "Enter square feet of wall space:", tryAgainMessage: "\(tryAgainString) or equal to 0")
+
+func roomsValidation (userInput: Double) -> Bool {
+    userInput >= 1
+}
+func paintPriceValidation (userInput: Double) -> Bool {
+    userInput >= 10.00
+}
+
+func squareFootageValidation (userInput: Double) -> Bool {
+    userInput >= 0
+}
+
+func getRoomsSquareFootage(for numRooms: Int) -> [Double] {
+    var wallSpace = [Double]()
+    for _ in 1...numRooms {
+        wallSpace.append(getSquareFeetOfWallSpace(squareFootageValidation))
+    }
+    return wallSpace
+}
+struct Estimate {
+    let gallonsOfPaint: Int
+    let hoursOfLabor: Double
+    var costPerGallon: Double
+    var costOfPaint: Double {
+       Double(gallonsOfPaint) * costPerGallon
+    }
+    var laborCharges: Double {
+        hoursOfLabor * 25.0
+    }
+     var total: Double {
+            costOfPaint + laborCharges
+     }
+}
+
+func convertUSD (_ amount: Double) -> String {
+    let currencyFormatter = NumberFormatter()
+    currencyFormatter.usesGroupingSeparator = true
+    currencyFormatter.numberStyle = .currency
+    currencyFormatter.locale = Locale(identifier: "en_US")
+    let priceString = currencyFormatter.string(from: NSNumber(value: amount))!
+    return priceString
+}
+
+func generateEstimate ( for roomsSquareFootageArray: [Double], when priceOfPaintPerGallon: Double) {
+    let totalSquareFeet = roomsSquareFootageArray.reduce(0.0, { currentTotal, nextRoom in
+        currentTotal + nextRoom
+    })
+    let gallonsOfPaint = (totalSquareFeet / 110.0).rounded(.up);
+    let hoursOfLabor = (totalSquareFeet / 110.0).rounded(.up) * 8
+    let currentEstimate = Estimate(
+            gallonsOfPaint: Int(gallonsOfPaint),
+            hoursOfLabor:  hoursOfLabor,
+            costPerGallon: priceOfPaintPerGallon)
+    print("The number of gallons of paint required: \(currentEstimate.gallonsOfPaint)")
+    print("The hours of labor required: \(convertUSD(currentEstimate.hoursOfLabor))")
+    print("The cost of the paint: \(convertUSD(currentEstimate.costOfPaint))")
+    print("The labor charges: \(convertUSD(currentEstimate.laborCharges))")
+    print("The total cost of the paint job: \(convertUSD(currentEstimate.total))")
+}
+func main() {
+    let numRooms = getNumberOfRooms(roomsValidation)
+    let priceOfPaintPerGallon = getPriceOfPaintPerGallon(paintPriceValidation)
+    let roomsSquareFootage = getRoomsSquareFootage(for: Int(numRooms))
+    generateEstimate(for: roomsSquareFootage, when: priceOfPaintPerGallon)
+}
+
+main();
+
+
+

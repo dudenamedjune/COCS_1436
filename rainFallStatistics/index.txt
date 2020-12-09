@@ -1,0 +1,90 @@
+//
+//  main.swift
+//  markup
+//
+//  Created by June Lara on 11/23/20.
+//
+//
+import Foundation
+//assumption no amount of rainfall will be exactly the same month to month
+// https://en.climate-data.org/north-america/united-states-of-america/texas/houston-487/
+// shows this holds true
+// "god" may make us increase scope in the future
+
+let NUM_MONTHS_IN_A_YEAR = 12;
+
+func userInput (
+        inputMessage: String,
+        tryAgainMessage: String
+) -> (@escaping (Double) -> Bool) -> Double {
+    func inputValidation (comparisonCb: @escaping (Double) -> Bool) -> Double {
+        print(inputMessage)
+        if let num = (Double)(readLine()!), comparisonCb(num) == true {
+            return num
+        } else {
+            print(tryAgainMessage)
+            return inputValidation(comparisonCb: comparisonCb)
+        }
+    }
+    return inputValidation;
+}
+
+let tryAgainString = "Please enter a non negative value ";
+let getRainFall = userInput(inputMessage: "Enter total rainfall:", tryAgainMessage: "\(tryAgainString)")
+
+func greaterThanZero(userInput: Double) -> Bool {
+    userInput >= 0
+}
+
+struct RainFallStats {
+    var min: Double?
+    var minMonth: Int?
+    var max: Double?
+    var maxMonth: Int?
+    var total = 0.0
+    var monthsCollected = 0
+    var average: Double {
+        total / Double(monthsCollected)
+    }
+    mutating func setMinRain( _ rain: Double, in month: Int) {
+        min = rain
+        minMonth = month
+    }
+    mutating func setMaxRain( _ rain: Double, in month: Int) {
+        max = rain
+        maxMonth = month
+    }
+    mutating func setTotal( _ rain: Double) {
+       total += rain
+        monthsCollected += 1
+    }
+}
+
+func main() {
+    var monthsOfRain = [Double]()
+    var RainStats = RainFallStats()
+    for month in  1...NUM_MONTHS_IN_A_YEAR {
+        let rain = getRainFall(greaterThanZero)
+        RainStats.setTotal(rain)
+        if month == 1 {
+            RainStats.setMinRain(rain,  in: month)
+            RainStats.setMaxRain(rain, in: month)
+            monthsOfRain.append(rain)
+            continue
+        }
+        if RainStats.min! > rain {
+            RainStats.setMinRain(rain, in: month)
+            continue
+        }
+        if RainStats.max! < rain {
+            RainStats.setMaxRain(rain, in: month)
+        }
+    }
+
+    print("Total: \(RainStats.total)")
+    print("Average: \(RainStats.average)")
+    print("Max: \(RainStats.max!) in Month \(RainStats.maxMonth!)")
+    print("Min: \(RainStats.min!) in Month \(RainStats.minMonth!)")
+}
+
+main()

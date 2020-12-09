@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e9e132bf-1ad3-4d33-b5a0-09c8c0e260a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../HotelOccupancy/HotelOccupancy" beforeDir="false" afterPath="$PROJECT_DIR$/../HotelOccupancy/HotelOccupancy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cellPackageCost/cellpackage" beforeDir="false" afterPath="$PROJECT_DIR$/../cellPackageCost/cellpackage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagonalDisplayLowHigh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../diagonalDisplayLowHigh/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagonalDisplayLowHigh/diagonalDisplayLowHigh/main.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../diagonalDisplayLowHigh/diagonalDisplayLowHigh/main.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distanceTraveled/playground" beforeDir="false" afterPath="$PROJECT_DIR$/../distanceTraveled/playground" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../idMatch" beforeDir="false" afterPath="$PROJECT_DIR$/../idMatch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../payrollReport/payrollReport" beforeDir="false" afterPath="$PROJECT_DIR$/../payrollReport/payrollReport" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../penniesForPay/playground" beforeDir="false" afterPath="$PROJECT_DIR$/../penniesForPay/playground" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../playground" beforeDir="false" afterPath="$PROJECT_DIR$/../playground" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentLineUp/studentLIneUp" beforeDir="false" afterPath="$PROJECT_DIR$/../studentLineUp/studentLIneUp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="macos_macos_x86_64" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1lOTmdzDo1cXNJkYU0MeSAnNoGD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="rainFallStatistics" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rainFallStatistics" TARGET_NAME="rainFallStatistics" CONFIG_NAME="Debug" SCHEME_NAME="rainFallStatistics" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="rainFallStatistics" RUN_TARGET_NAME="rainFallStatistics" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9e132bf-1ad3-4d33-b5a0-09c8c0e260a6" name="Default Changelist" comment="" />
+      <created>1607467301990</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607467301990</updated>
+      <workItem from="1607467307076" duration="6290000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="2518" height="419" key="GridCell.Tab.0.bottom" timestamp="1607476804231">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="419" key="GridCell.Tab.0.bottom/0.0.2560.1440/750.1440.1102.742@0.0.2560.1440" timestamp="1607476804231" />
+    <state width="2518" height="419" key="GridCell.Tab.0.center" timestamp="1607476804230">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="419" key="GridCell.Tab.0.center/0.0.2560.1440/750.1440.1102.742@0.0.2560.1440" timestamp="1607476804230" />
+    <state width="2518" height="419" key="GridCell.Tab.0.left" timestamp="1607476804230">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="419" key="GridCell.Tab.0.left/0.0.2560.1440/750.1440.1102.742@0.0.2560.1440" timestamp="1607476804230" />
+    <state width="2518" height="419" key="GridCell.Tab.0.right" timestamp="1607476804230">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2518" height="419" key="GridCell.Tab.0.right/0.0.2560.1440/750.1440.1102.742@0.0.2560.1440" timestamp="1607476804230" />
+    <state width="600" height="400" key="NewXcodeProjectWizard" timestamp="1607476799127">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="600" height="400" key="NewXcodeProjectWizard/0.0.2560.1440/750.1440.1102.742@0.0.2560.1440" timestamp="1607476799127" />
+    <state width="600" height="440" key="javadoc.popup" timestamp="1607471330969">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="600" height="440" key="javadoc.popup/0.0.2560.1440/750.1440.1102.742@0.0.2560.1440" timestamp="1607471330969" />
+  </component>
+</project>

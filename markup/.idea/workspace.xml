@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93f7ff5c-2db3-4650-9be7-e2d682311c13" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../HotelOccupancy/HotelOccupancy" beforeDir="false" afterPath="$PROJECT_DIR$/../HotelOccupancy/HotelOccupancy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cellPackageCost/cellpackage" beforeDir="false" afterPath="$PROJECT_DIR$/../cellPackageCost/cellpackage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagonalDisplayLowHigh/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../diagonalDisplayLowHigh/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diagonalDisplayLowHigh/diagonalDisplayLowHigh/main.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../diagonalDisplayLowHigh/diagonalDisplayLowHigh/main.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../distanceTraveled/playground" beforeDir="false" afterPath="$PROJECT_DIR$/../distanceTraveled/playground" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../idMatch" beforeDir="false" afterPath="$PROJECT_DIR$/../idMatch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../payrollReport/payrollReport" beforeDir="false" afterPath="$PROJECT_DIR$/../payrollReport/payrollReport" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../penniesForPay/playground" beforeDir="false" afterPath="$PROJECT_DIR$/../penniesForPay/playground" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../playground" beforeDir="false" afterPath="$PROJECT_DIR$/../playground" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentLineUp/studentLIneUp" beforeDir="false" afterPath="$PROJECT_DIR$/../studentLineUp/studentLIneUp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="macos_macos_x86_64" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1kitQLgSHybPHOh4oYrFhsKHtae" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="markup" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="markup" TARGET_NAME="markup" CONFIG_NAME="Debug" SCHEME_NAME="markup" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="markup" RUN_TARGET_NAME="markup" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93f7ff5c-2db3-4650-9be7-e2d682311c13" name="Default Changelist" comment="" />
+      <created>1606195223477</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606195223477</updated>
+      <workItem from="1606195224762" duration="1891000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1457" height="419" key="GridCell.Tab.0.bottom" timestamp="1606197120331">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1457" height="419" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1606197120331" />
+    <state width="1457" height="419" key="GridCell.Tab.0.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1606195999454" />
+    <state width="1457" height="419" key="GridCell.Tab.0.center" timestamp="1606197120330">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1457" height="419" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1606197120330" />
+    <state width="1457" height="419" key="GridCell.Tab.0.center/0.25.2560.1415@0.25.2560.1415" timestamp="1606195999452" />
+    <state width="1457" height="419" key="GridCell.Tab.0.left" timestamp="1606197120330">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1457" height="419" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1606197120330" />
+    <state width="1457" height="419" key="GridCell.Tab.0.left/0.25.2560.1415@0.25.2560.1415" timestamp="1606195999451" />
+    <state width="1457" height="419" key="GridCell.Tab.0.right" timestamp="1606197120330">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1457" height="419" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1606197120330" />
+    <state width="1457" height="419" key="GridCell.Tab.0.right/0.25.2560.1415@0.25.2560.1415" timestamp="1606195999453" />
+    <state width="600" height="400" key="NewXcodeProjectWizard" timestamp="1606197111179">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="600" height="400" key="NewXcodeProjectWizard/0.0.2560.1440@0.0.2560.1440" timestamp="1606197111179" />
+  </component>
+</project>

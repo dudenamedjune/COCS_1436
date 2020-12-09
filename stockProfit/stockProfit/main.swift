@@ -1,0 +1,59 @@
+//
+//  main.swift
+//  markup
+//
+//  Created by June Lara on 11/23/20.
+//
+//
+import Foundation
+
+func userInput (
+        inputMessage: String,
+        tryAgainMessage: String
+) -> (@escaping (Double) -> Bool) -> Double {
+    func inputValidation (comparisonCb: @escaping (Double) -> Bool) -> Double {
+        print(inputMessage)
+        if let num = (Double)(readLine()!), comparisonCb(num) == true {
+            return num
+        } else {
+            print(tryAgainMessage)
+            return inputValidation(comparisonCb: comparisonCb)
+        }
+    }
+    return inputValidation;
+}
+
+let tryAgainString = "Please enter a number greater than";
+let getNumberOfShares = userInput(inputMessage: "Number of shares:", tryAgainMessage: "\(tryAgainString)")
+let getPurchasePricePerShare = userInput(inputMessage: "Purchase Price Per Share:", tryAgainMessage: "\(tryAgainString)")
+let getCommissionPaid = userInput(inputMessage: "Commission Paid:", tryAgainMessage: "\(tryAgainString)")
+let getSalePricePerShare = userInput(inputMessage: "Sales Price Per Share:", tryAgainMessage: "\(tryAgainString)")
+let getSaleCommissionPaid = userInput(inputMessage: "Sales Commission Paid:", tryAgainMessage: "\(tryAgainString)")
+
+func validationOverride(userInput: Double) -> Bool {
+    true
+}
+
+func profit (NS: Double, SP: Double, SC: Double, PP: Double, PC: Double) -> Double{
+   ((NS * SP ) - SC) - ((NS * PP) + PC)
+}
+
+func convertUSD (_ amount: Double) -> String {
+    let currencyFormatter = NumberFormatter()
+    currencyFormatter.usesGroupingSeparator = true
+    currencyFormatter.numberStyle = .currency
+    currencyFormatter.locale = Locale(identifier: "en_US")
+    let priceString = currencyFormatter.string(from: NSNumber(value: amount))!
+    return priceString
+}
+
+func main() {
+    let NS =  getNumberOfShares(validationOverride);
+    let PP =  getPurchasePricePerShare(validationOverride);
+    let PC =  getCommissionPaid(validationOverride);
+    let SP =  getSalePricePerShare(validationOverride);
+    let SC =  getSaleCommissionPaid(validationOverride);
+    print(convertUSD(profit(NS: NS, SP: SP, SC: SC, PP: PP, PC: PC)))
+}
+
+main()

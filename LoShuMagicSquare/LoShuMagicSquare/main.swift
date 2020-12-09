@@ -1,0 +1,81 @@
+//
+//  main.swift
+//  TwoDimensionalArrayOperations
+//
+//  Created by June Lara on 12/8/20.
+//
+//
+
+import Foundation
+
+let magicSquare = [
+    [4,   9,  2],
+    [3,  5,  7],
+    [8,  1, 6]
+]
+
+let notMagic = [
+    [1,1,1],
+    [3,4,5],
+    [5, 5, 5]
+]
+
+let colWrong = [
+    [4,   9,  2],
+    [3,  5,  7],
+    [6,  1, 8]
+]
+
+func getTotal (array: [[Int]]) -> Int {
+    var total = 0
+    array.joined().forEach { num in
+        total += num
+    }
+    return total
+}
+
+func getRowTotal(array: [[Int]], rowIndex: Int) -> Int {
+    getTotal(array: [array[rowIndex]])
+}
+
+func getColumnTotal(array: [[Int]], columnIndex: Int) -> Int {
+    var total = 0
+    array.forEach { row in
+        total += row[columnIndex]
+    }
+    return total
+}
+
+func getMainDiagonalTotal(array: [[Int]]) -> Int {
+    var total = 0
+    for (index, row) in array.enumerated() {
+        total += row[index]
+    }
+    return total
+}
+
+func getCounterDiagonalTotal(array: [[Int]]) -> Int {
+    var total = 0
+    for (index, row) in array.enumerated().reversed() {
+        total += row[index]
+    }
+    return total
+}
+func checkRowsAndColumns(array: [[Int]]) -> Bool {
+    for (index, _) in array.enumerated() {
+       if getColumnTotal(array: array, columnIndex: index) != 15 || getRowTotal(array: array, rowIndex: index)  != 15 {
+           return false
+       }
+    }
+    return true
+}
+
+func isLoShuMagicSquare(square: [[Int]]) -> Bool{
+    if getTotal(array: square) != 45 { return false }
+    let diagonalsPass = 15 ~= getCounterDiagonalTotal(array: square) & getMainDiagonalTotal(array: square)
+    return diagonalsPass && checkRowsAndColumns(array: square)
+}
+
+print(isLoShuMagicSquare(square: notMagic)) //false
+print(isLoShuMagicSquare(square: magicSquare)) //true
+print(isLoShuMagicSquare(square: colWrong)) //false

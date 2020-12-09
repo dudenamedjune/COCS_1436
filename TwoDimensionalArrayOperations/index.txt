@@ -1,0 +1,56 @@
+//
+//  main.swift
+//  TwoDimensionalArrayOperations
+//
+//  Created by June Lara on 12/8/20.
+//
+//
+
+import Foundation
+
+let array2D = [
+    [5,   5,   5],
+    [10,  5,  10],
+    [5,  10 , 10]
+]
+
+func getTotal (array: [[Int]]) -> Int {
+    var total = 0
+    array.joined().forEach { num in
+        total += num
+    }
+    return total
+}
+
+func getAverage(array: [[Int]]) -> Int {
+    getTotal(array: array) / array.joined().count
+}
+
+func getRowTotal(array: [[Int]], rowIndex: Int) -> Int {
+   getTotal(array: [array[rowIndex]])
+}
+
+func getColumnTotal(array: [[Int]], columnIndex: Int) -> Int {
+    var total = 0;
+    array.forEach { row in
+        total += row[columnIndex]
+    }
+    return total
+}
+
+func getHighestInRow(array: [[Int]], rowIndex: Int) -> Int {
+    array[rowIndex].max()!
+}
+
+func getLowestInRow(array: [[Int]], rowIndex: Int) -> Int {
+    array[rowIndex].min()!
+}
+
+print("Total: \(getTotal(array: array2D))")
+print("Average: \(getAverage(array: array2D))")
+print("Row Total: \(getRowTotal(array: array2D, rowIndex: 0))")
+print("Column Total:  \(getColumnTotal(array: array2D, columnIndex: 2))")
+print("Highest in Row: \(getHighestInRow(array: array2D, rowIndex: 1))")
+print("Lowest in Row: \(getLowestInRow(array: array2D, rowIndex: 2))")
+
+
